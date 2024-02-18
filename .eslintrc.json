@@ -1,3 +1,26 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "airbnb-base",
+    "plugin:vue/recommended",
+    "plugin:prettier/recommended",
+    "plugin:storybook/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "parser": "@babel/eslint-parser"
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "semi": ["error", "never"],
+    "vue/multi-word-component-names": "off",
+    "vue/no-multiple-template-root": "off",
+    "no-plusplus": "off",
+    "prettier/prettier": "error",
+    "import/no-unresolved": ["error", { "caseSensitive": false }]
+  },
+  "ignorePatterns": ["/.storybook/", "/ckeditor5/"]
 }
