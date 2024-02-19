@@ -47,7 +47,7 @@ const Hero = () => {
               ))}
             </select>
           </div>
-        </div>{' '}
+        </div>
       </div>
 
       {/* RIGHT */}
