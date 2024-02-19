@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5">
+    <nav className="flexBetween max-container padding-container  z-30 py-2 bg-white shadow-md sticky top-0 left-0">
       <Link href="/">
         <Image src="/logo.png" alt="logo" width={78} height={60} />
       </Link>
@@ -38,7 +38,7 @@ const Navbar = () => {
           <li key={link.key}>
             <Link
               href={link.href}
-              className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
+              className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-ease-in hover:font-bold"
             >
               {link.label}
             </Link>
@@ -48,8 +48,8 @@ const Navbar = () => {
 
       {/* Overlay and Mobile Menu (visible only when menu is open) */}
       {menuOpen && (
-        <div className="fixed top-0 left-0 w-full h-full z-40 bg-black opacity-100">
-          <div className="flexBetween max-container padding-container relative py-5">
+        <div className="fixed top-0 left-0 w-full h-full z-40 bg-white opacity-100">
+          <div className="flexBetween max-container padding-container relative py-2">
             <Link href="/">
               <Image src="/logo.png" alt="logo" width={78} height={60} />
             </Link>
@@ -59,14 +59,14 @@ const Navbar = () => {
                 alt="Close"
                 width={40}
                 height={24}
-                className="cursor-pointer rounded-full bg-gray-50 p-1 transition-all hover:bg-gray-100"
+                className="cursor-pointer rounded-full bg-gray-400 p-1 transition-all hover:bg-gray-600"
               />
             </button>
           </div>
 
           <ul className="max-container padding-container flex flex-col items-center justify-center py-32 ">
             {NAV_LINKS.map((link) => (
-              <li key={link.key} className="p-2 ">
+              <li key={link.key} className="p-2">
                 <Button
                   type="button"
                   title={link.label}

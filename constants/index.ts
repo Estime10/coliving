@@ -1,16 +1,26 @@
 // NAVIGATION
 
 export const NAV_LINKS = [
-  { href: '/', key: 'home', label: 'Home' },
+  { href: '/home', key: 'home', label: 'Home' },
   {
-    href: '/',
+    href: '/hotspots',
     key: 'hotspots',
     label: 'Hot Spots',
   },
   {
-    href: '/',
+    href: '/properties',
     key: 'properties',
     label: 'Properties',
   },
-  { href: '/', key: 'contact', label: 'Contact' },
+  { href: '/contact', key: 'contact', label: 'Contact' },
+];
+
+// SELECT OPTIONS
+
+export const LOCATIONS = [
+  { key: 'all', value: 'all', label: 'All Locations' },
+  { key: 'Brussels', value: 'Brussels', label: 'Brussels' },
+  { key: 'Antwerp', value: 'Antwerp', label: 'Antwerp' },
+  { key: 'Ghent', value: 'Ghent', label: 'Ghent' },
+  { key: 'Bruges', value: 'Bruges', label: 'Bruges' },
 ];
