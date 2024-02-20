@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import SliderOne from '@/components/SliderOne';
 import Hotspots from '@/components/Hotspots';
 import Properties from '@/components/Properties';
 
