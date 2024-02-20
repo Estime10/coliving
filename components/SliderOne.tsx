@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { SLIDER_ONE } from '@/constants';
 
 const SliderOne = () => {
   const isMediumScreen = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
@@ -37,73 +38,17 @@ const SliderOne = () => {
     xl:flex-row xl:pr-32"
     >
       <Slider {...settings}>
-        <>
-          <div className="rounded-md px-2 md:p-10">
+        {SLIDER_ONE.map((image) => (
+          <div key={image} className="rounded-md px-2 md:p-10">
             <Image
-              src="/home.png"
+              src={image}
               alt="slider1"
               width={500}
               height={500}
               className="rounded-2xl"
             />
           </div>
-        </>
-
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              src="/home2.png"
-              alt="slider1"
-              width={500}
-              height={500}
-              className="rounded-2xl"
-            />
-          </div>
-        </>
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              src="/home3.png"
-              alt="slider1"
-              width={500}
-              height={500}
-              className="rounded-2xl"
-            />
-          </div>
-        </>
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              src="/home4.png"
-              alt="slider1"
-              width={500}
-              height={500}
-              className="rounded-2xl"
-            />
-          </div>
-        </>
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              src="/home5.png"
-              alt="slider1"
-              width={500}
-              height={500}
-              className="rounded-2xl"
-            />
-          </div>
-        </>
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              src="/home6.png"
-              alt="slider1"
-              width={500}
-              height={500}
-              className="rounded-2xl"
-            />
-          </div>
-        </>
+        ))}
       </Slider>
     </section>
   );
