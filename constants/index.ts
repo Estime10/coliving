@@ -27,23 +27,31 @@ export const LOCATIONS = [
 
 // SLIDER IMAGES
 export const SLIDER_ONE = [
-  '/home.png',
-  '/home2.png',
-  '/home3.png',
-  '/home4.png',
-  '/home5.png',
-  '/home6.png',
+  '/image/home.png',
+  '/image/home2.png',
+  '/image/home3.png',
+  '/image/home4.png',
+  '/image/home5.png',
+  '/image/home6.png',
 ];
 
 // GALLERY IMAGES
-
-export const GALLERY_IMAGES = [
-  '/villa.jpg',
-  '/villa2.jpg',
-  '/villa3.jpg',
-  '/villa4.jpg',
-  '/villa5.jpg',
-  '/villa6.jpg',
-  '/villa7.jpg',
-  '/villa8.jpg',
+export const GALLERY_ONE = [
+  '/image/villa.jpg',
+  '/image/villa1.jpg',
+  '/image/villa2.jpg',
+  '/image/villa3.jpg',
+  '/image/villa3.png',
+  '/image/villa4.jpg',
+  '/image/villa5.jpg',
+  '/image/villa6.jpg',
+  '/image/villa6.png',
+  '/image/villa7.png',
+  '/image/villa7.jpg',
+  '/image/villa8.jpg',
+  '/image/villa9.jpg',
+  '/image/villa10.jpg',
+  '/image/villa11.jpg',
+  '/image/villa12.jpg',
+  '/image/villa13.jpg',
 ];
