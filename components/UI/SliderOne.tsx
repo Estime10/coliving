@@ -19,11 +19,11 @@ const SliderOne = () => {
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 4000,
-    className: 'w-full mx-auto  cursor-pointer center-mode',
+    className: 'w-full mx-auto cursor-pointer center-mode',
   };
 
   if (isMediumScreen) {
-    settings.slidesToShow = 3;
+    settings.slidesToShow = 3.87;
   } else if (isSmallScreen) {
     settings.slidesToShow = 1;
   }
@@ -32,10 +32,10 @@ const SliderOne = () => {
     <section
       className="max-container padding-container 
       lg:px-0 xl:p-0 md:p-0 
-    flex flex-col gap-20 py-10
-    md:pr-32
-    md:gap-28 lg:py-20 lg:pr-32
-    xl:flex-row xl:pr-32"
+    flex flex-col gap-20 pt-10
+    md:pr-0
+    md:gap-28 lg:py-0 lg:pr-0
+    xl:flex-row xl:pr-0"
     >
       <Slider {...settings}>
         {SLIDER_ONE.map((image) => (
