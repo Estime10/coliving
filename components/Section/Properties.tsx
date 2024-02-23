@@ -1,4 +1,4 @@
-import GalleryOne from '../UI/GalleryOne';
+import GalleryOfProperties from '../UI/GalleryOfProperties';
 
 const Properties = () => {
   return (
@@ -23,7 +23,7 @@ const Properties = () => {
           </span>
         </div>
         <div className="mt-4">
-          <GalleryOne />
+          <GalleryOfProperties />
         </div>
       </div>
     </section>
