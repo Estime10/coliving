@@ -1,31 +1,33 @@
-import SliderOne from '../UI/SliderOne';
+import GalleryOfProperties from '../PropertiesSection/UI/GalleryOfProperties';
 
-const Hotspots = () => {
+const Properties = () => {
   return (
     <section
       className="max-container padding-container 
     flex flex-col gap-20 py-10
-    md:gap-28 lg:pb-20 lg:pt-0
+    md:gap-28  
     xl:flex-row"
     >
       <div>
         <div className="flex items-center">
           <h1 className="bold-32 text-center lg:bold-32 xl:text-start mr-4 capitalize">
-            hot spots
+            properties
           </h1>
           <hr className="w-1/2 flex-shrink-0 border-t-2 border-gray-500" />
         </div>
         <div>
           <span className="regular-14 text-center xl:text-start capitalize">
-            Dive into an exceptional community living experience where the
-            comfort of your home meets the excitement of shared living.
+            Welcome to our coliving space, where each day brings new
+            connections, new adventures, and a community that inspires you to
+            live fully
           </span>
         </div>
-
-        <SliderOne />
+        <div className="mt-4">
+          <GalleryOfProperties />
+        </div>
       </div>
     </section>
   );
 };
 
-export default Hotspots;
+export default Properties;

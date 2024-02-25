@@ -1,12 +1,9 @@
+'use client';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBath, faBed } from '@fortawesome/free-solid-svg-icons';
-import {
-  GALLERYGROUP1,
-  GALLERYGROUP2,
-  GALLERYGROUP3,
-  GALLERYGROUP4,
-} from '@/constants';
+import { GALLERYGROUP } from '@/constants';
 import MyModal from '@/components/Tool/MyModal';
 
 const ImageOverlay = ({
@@ -15,18 +12,42 @@ const ImageOverlay = ({
   rooms,
   baths,
   m2,
+  id,
+  price,
+  length,
+  label,
 }: {
   src: string;
   alt: string;
   rooms: number;
   baths: number;
   m2: number;
+  id: string;
+  price: string;
+  length: string;
+  label: string;
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="relative">
       <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-      <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold ">
-        <MyModal />
+      <div onClick={openModal} 
+      className="absolute inset-0 flex items-center justify-center 
+      text-white text-2xl font-bold cursor-pointer">
+        <MyModal
+          modalId={id}
+          modalDetails={{ src, rooms, baths, m2, price, length, label }}
+          onClose={handleCloseModal}
+        />
       </div>
       <div className="hidden absolute bottom-0 w-full lg:flex justify-between px-4 pb-4 text-white">
         <div className="flex space-x-3">
@@ -57,11 +78,27 @@ const ImageOverlay = ({
   );
 };
 
+
 const GalleryOfProperties = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+            {isModalOpen && (
+      <div onClick={openModal} className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold cursor-pointer">
+        Open Modal
+      </div>
+      )}
       <div className="grid gap-4">
-        {GALLERYGROUP1.map((image, index) => (
+        {GALLERYGROUP.GALLERYGROUP1.map((image, index) => (
           <ImageOverlay
             key={index}
             src={image.src}
@@ -69,11 +106,15 @@ const GalleryOfProperties = () => {
             rooms={image.rooms}
             baths={image.baths}
             m2={image.m2}
+            id={`modal-${index}`}
+            price={image.price}
+            length={image.length}
+            label={image.label}
           />
         ))}
       </div>
       <div className="grid gap-4">
-        {GALLERYGROUP2.map((image, index) => (
+        {GALLERYGROUP.GALLERYGROUP2.map((image, index) => (
           <ImageOverlay
             key={index}
             src={image.src}
@@ -81,11 +122,15 @@ const GalleryOfProperties = () => {
             rooms={image.rooms}
             baths={image.baths}
             m2={image.m2}
+            id={`modal-${index}`}
+            price={image.price}
+            length={image.length}
+            label={image.label}
           />
         ))}
       </div>
       <div className="grid gap-4">
-        {GALLERYGROUP3.map((image, index) => (
+        {GALLERYGROUP.GALLERYGROUP3.map((image, index) => (
           <ImageOverlay
             key={index}
             src={image.src}
@@ -93,11 +138,15 @@ const GalleryOfProperties = () => {
             rooms={image.rooms}
             baths={image.baths}
             m2={image.m2}
+            id={`modal-${index}`}
+            price={image.price}
+            length={image.length}
+            label={image.label}
           />
         ))}
       </div>
       <div className="grid gap-4">
-        {GALLERYGROUP4.map((image, index) => (
+        {GALLERYGROUP.GALLERYGROUP4.map((image, index) => (
           <ImageOverlay
             key={index}
             src={image.src}
@@ -105,6 +154,10 @@ const GalleryOfProperties = () => {
             rooms={image.rooms}
             baths={image.baths}
             m2={image.m2}
+            id={`modal-${index}`}
+            price={image.price}
+            length={image.length}
+            label={image.label}
           />
         ))}
       </div>

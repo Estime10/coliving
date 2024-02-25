@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SetStateAction, useState } from 'react';
-import Button from '../Tool/Button';
+import Button from './Tool/Button';
 import { NAV_LINKS } from '@/constants';
 
 const Navbar = () => {

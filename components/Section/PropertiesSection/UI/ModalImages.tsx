@@ -1,11 +1,11 @@
 import { MODALGALLERY1 } from '@/constants';
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 
-const PropertiesGallery = () => {
+const ModalImages = () => {
   const [upperIndex, setUpperIndex] = useState(0);
 
-  const handleImageClick = (lowerIndex: SetStateAction<number>) => {
+  const handleImageClick = (lowerIndex: number) => {
     setUpperIndex(lowerIndex);
   };
 
@@ -38,4 +38,4 @@ const PropertiesGallery = () => {
   );
 };
 
-export default PropertiesGallery;
+export default ModalImages;
