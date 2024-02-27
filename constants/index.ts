@@ -1,18 +1,18 @@
 // NAVIGATION
 
 export const NAV_LINKS = [
-  { href: '/home', key: 'home', label: 'Home' },
+  { href: '/', key: 'home', label: 'Home' },
   {
-    href: '/hotspots',
+    href: '/',
     key: 'hotspots',
     label: 'Hot Spots',
   },
   {
-    href: '/properties',
+    href: '/',
     key: 'properties',
     label: 'Properties',
   },
-  { href: '/contact', key: 'contact', label: 'Contact' },
+  { href: '/', key: 'contact', label: 'Contact' },
 ];
 
 // SELECT OPTIONS
@@ -68,18 +68,5 @@ export const MODALGALLERY1 = [
   { id: 6, src: '/image/home6.png', alt: '' },
 ];
 
-export const MODALGALLERY1DETAILS = [
-  { id: 1, label: 'Villa', price: '740 Eu', length: '6 months', rooms: 20, baths: 3, m2: 300, src: '/image/villa.jpg' },
-  { id: 2, label: 'Castel', price: '840 Eu', length: '8 months', rooms: 30, baths: 4, m2: 400, src: '/image/villa9.png' },
-  { id: 3, label: 'Mansion', price: '940 Eu', length: '10 months', rooms: 40, baths: 5, m2: 500, src: '/image/villa3.png' },
-  { id: 4, label: 'Apartment', price: '1040 Eu', length: '12 months', rooms: 50, baths: 6, m2: 600, src: '/image/villa4.jpg' },
-  { id: 5, label: 'House', price: '1140 Eu', length: '14 months', rooms: 60, baths: 7, m2: 700, src: '/image/villa11.jpg' },
-  { id: 6, label: 'Penthouse', price: '1240 Eu', length: '16 months', rooms: 70, baths: 8, m2: 800, src: '/image/villa2.jpg' },
-  { id: 7, label: 'Loft', price: '1340 Eu', length: '18 months', rooms: 80, baths: 9, m2: 900, src: '/image/villa8.jpg' },
-  { id: 8, label: 'Studio', price: '1440 Eu', length: '20 months', rooms: 90, baths: 10, m2: 1000, src: '/image/villa7.png' },
-  { id: 9, label: 'Flat', price: '1540 Eu', length: '22 months', rooms: 100, baths: 11, m2: 1100, src: '/image/villa6.png' },
-  { id: 10, label: 'Villa', price: '1640 Eu', length: '24 months', rooms: 110, baths: 12, m2: 1200, src: '/image/villa10.jpg' },
-  { id: 11, label: 'Castel', price: '1740 Eu', length: '26 months', rooms: 120, baths: 13, m2: 1300, src: '/image/villa7.png' },
-];
 
 
