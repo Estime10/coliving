@@ -1,6 +1,22 @@
 import Image from 'next/image';
 
-const ImageOverlay = ({ src, alt }: { src: string; alt: string }) => {
+const ImageOverlay = ({
+  id,
+  src,
+  alt,
+  rooms,
+  baths,
+  m2,
+  onImageClick
+}: {
+  id: number;
+  src: string;
+  alt: string;
+  rooms: number;
+  baths: number;
+  m2: number;
+  onImageClick: () => void;
+}) => {
   return (
     <div className="relative">
       <div className="absolute inset-0 bg-black opacity-100 rounded-lg"></div>
@@ -10,6 +26,7 @@ const ImageOverlay = ({ src, alt }: { src: string; alt: string }) => {
         alt={alt}
         width={500}
         height={500}
+        onClick={onImageClick}
       />
     </div>
   );

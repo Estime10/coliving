@@ -1,6 +1,6 @@
 import { LOCATIONS } from '@/constants';
 import Image from 'next/image';
-import Select from '../UI/Select';
+import Select from './UI/Select';
 
 const Hero = () => {
   return (

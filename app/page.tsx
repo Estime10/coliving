@@ -1,13 +1,12 @@
-import Hero from '@/components/Section/Hero';
-import Hotspots from '@/components/Section/Hotspots';
-import Properties from '@/components/Section/Properties';
-
+import Hero from '@/components/Section/HeroSection/Hero';
+import Hotspots from '@/components/Section/HotspotSection/Hotspots';
+import Properties from '@/components/Section/PropertiesSection/Properties';
 export default function Home() {
-  return (
-    <>
-      <Hero />
-      <Hotspots />
-      <Properties />
-    </>
-  );
+	return (
+		<>
+			<Hero />
+			<Hotspots />
+			<Properties />
+		</>
+	);
 }
